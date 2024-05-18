@@ -1,10 +1,7 @@
-
 -- 1.List all customers
-
 SELECT * FROM Customers;
 
 --2. Find all orders placed in January 2023
-
 SELECT * FROM Orders
 WHERE OrderDate BETWEEN '2023-01-01' AND '2023-01-31'
 --for full details
@@ -13,7 +10,6 @@ FROM Orders AS o JOIN Customers AS c ON c.CustomerID = o.CustomerID
 WHERE o.OrderDate BETWEEN '2023-01-01' AND '2023-01-31';
 
 --3. Get the details of each order, including the customer name and email
-
 SELECT 
     Orders.OrderID,
     Orders.OrderDate,
@@ -24,7 +20,6 @@ FROM  Orders
 JOIN   Customers ON Orders.CustomerID = Customers.CustomerID;
 
 --4.List the products purchased in a specific order (e.g., OrderID = 1)
-
 SELECT 
     Products.ProductName,
     OrderItems.Quantity
@@ -36,7 +31,6 @@ WHERE
     OrderItems.OrderID = 1;
 
 --5. Calculate the total amount spent by each customer
-
 SELECT Customers.CustomerID, Customers.FirstName,Customers.LastName,
     SUM(Products.Price * OrderItems.Quantity) AS TotalSpent
 FROM   Customers
@@ -49,7 +43,6 @@ GROUP BY
     Customers.LastName;
 
 --6. Find the most popular product (the one that has been ordered the most)
-
 SELECT 
     Products.ProductID,
     Products.ProductName,
@@ -65,7 +58,6 @@ ORDER BY TotalQuantitySold DESC
 LIMIT 1;
 
 --7. Get the total number of orders and the total sales amount for each month in 2023
-
 SELECT 
     DATE_FORMAT(OrderDate, '%Y-%m') AS Month,
     COUNT(Orders.OrderID) AS TotalOrders,
@@ -82,7 +74,6 @@ GROUP BY
     DATE_FORMAT(OrderDate, '%Y-%m');
 
 --8. Find customers who have spent more than $1000
-
 SELECT 
     Customers.CustomerID,
     Customers.FirstName,
