@@ -13,7 +13,7 @@ This project contains the structure and sample data for a retail store database.
 ![Output-1](outpu1.png)
 
 ### 2. Find all orders placed in January 2023
-![Output-2](output2.png)
+![Output-2](ouput2.png)
 
 ### 3. Get the details of each order, including the customer name and email
 ![Output-3](output3.png)
