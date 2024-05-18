@@ -3,68 +3,35 @@
 This project contains the structure and sample data for a retail store database. The database includes tables for customers, products, orders, and order items. Additionally, a set of sample SQL queries is provided to demonstrate various operations on the database.
 
 ## Table of Contents
-- [Database Structure](#database-structure)
 - [Sample Data](#sample-data)
-- [SQL Queries](#sql-queries)
-- [Setup Instructions](#setup-instructions)
+- [Outputs](#sql-outputs)
 
-## Database Structure
 
-The database consists of the following tables:
+## Outputs:
 
-1. **Customers**
-   - `CustomerID`: INT, PRIMARY KEY
-   - `FirstName`: VARCHAR(50)
-   - `LastName`: VARCHAR(50)
-   - `Email`: VARCHAR(100)
-   - `DateOfBirth`: DATE
+### 1. List all customers 
+![Output-1](outpu1.png)
 
-2. **Products**
-   - `ProductID`: INT, PRIMARY KEY
-   - `ProductName`: VARCHAR(100)
-   - `Price`: DECIMAL(10, 2)
+###2. Find all orders placed in January 2023
+![Output-2](output2.png)
 
-3. **Orders**
-   - `OrderID`: INT, PRIMARY KEY
-   - `CustomerID`: INT, FOREIGN KEY references `Customers(CustomerID)`
-   - `OrderDate`: DATE
+###3. Get the details of each order, including the customer name and email
+![Output-2](output3.png)
 
-4. **OrderItems**
-   - `OrderItemID`: INT, PRIMARY KEY
-   - `OrderID`: INT, FOREIGN KEY references `Orders(OrderID)`
-   - `ProductID`: INT, FOREIGN KEY references `Products(ProductID)`
-   - `Quantity`: INT
+###4. List the products purchased in a specific order (e.g., OrderID = 1)
+![Output-2](output4.png)
 
-## Sample Data
+###5. Calculate the total amount spent by each customer
+![Output-2](output5.png)
 
-### Customers
-| CustomerID | FirstName | LastName | Email                | DateOfBirth |
-|------------|-----------|----------|----------------------|-------------|
-| 1          | John      | Doe      | john.doe@example.com | 1985-01-15  |
-| 2          | Jane      | Smith    | jane.smith@example.com| 1990-06-20  |
+###6. Find the most popular product (the one that has been ordered the most)
+![Output-2](output6.png)
 
-### Products
-| ProductID | ProductName | Price |
-|-----------|--------------|-------|
-| 1         | Laptop       | 1000  |
-| 2         | Smartphone   | 600   |
-| 3         | Headphones   | 100   |
+###7. Get the total number of orders and the total sales amount for each month in 2023
+![Output-2](output7.png)
 
-### Orders
-| OrderID | CustomerID | OrderDate  |
-|---------|------------|------------|
-| 1       | 1          | 2023-01-10 |
-| 2       | 2          | 2023-01-12 |
+###8. Find customers who have spent more than $1000
+![Output-2](output8.png)
 
-### OrderItems
-| OrderItemID | OrderID | ProductID | Quantity |
-|-------------|---------|-----------|----------|
-| 1           | 1       | 1         | 1        |
-| 2           | 1       | 3         | 2        |
-| 3           | 2       | 2         | 1        |
-| 4           | 2       | 3         | 1        |
 
-## SQL Queries
 
-### 1. List all customers
-![Output-1](output1.png)
