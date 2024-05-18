@@ -2,11 +2,6 @@
 
 This project contains the structure and sample data for a retail store database. The database includes tables for customers, products, orders, and order items. Additionally, a set of sample SQL queries is provided to demonstrate various operations on the database.
 
-## Table of Contents
-- [Sample Data](#sample-data)
-- [Outputs](#sql-outputs)
-
-
 ## Outputs:
 
 ###  1. List all customers 
